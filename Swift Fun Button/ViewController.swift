@@ -10,7 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var statusLabel: UILabel!
+    
     @IBAction func buttonPressed(sender: UIButton) {
+        let title = sender.titleForState(UIControlState.Normal)!
+        let plainText = "\(title) button pressed"
+        statusLabel.text = plainText
     }
     
 }
